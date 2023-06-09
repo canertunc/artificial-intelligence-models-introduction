@@ -64,3 +64,7 @@ body {
 .main-head {
     font-size: 75px;
 }
+.head img{
+    width: 100px;
+    height: 100px;
+}
