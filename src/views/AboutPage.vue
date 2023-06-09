@@ -12,7 +12,9 @@
         <div class="about-author">
             Caner Tunç
         </div>
-
+    </div>
+    <div class="footer-bar footer-in-about">
+        <AppFooterSection />
     </div>
 </template>
 
@@ -22,7 +24,7 @@
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        margin-top: 154px;
+        margin-top: 134px;
         background-color: black;
         opacity: 0.9;
         margin-left: 600px;
@@ -38,5 +40,11 @@
     .about-detail{
         padding: 20px 20px;
         text-align: center;
+    }
+    .about-author {
+        margin-bottom: 20px;
+    }
+    .footer-in-about {
+        margin-top: 71px;
     }
 </style>
