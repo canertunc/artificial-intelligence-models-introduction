@@ -19,6 +19,21 @@
     .footer-in-home{
         margin-top: 70px;
     }
+    .home {
+        animation: slideInLeft 1.5s ease-in-out forwards;
 
+    }
+
+
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 
 </style>

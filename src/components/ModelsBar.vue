@@ -18,10 +18,10 @@
         </div>
         <div class="choices-bar">
             <div class="model-button">
-                <button @click="isActiveMlExample = true" class="model-name-button" :class="{focusButton : isActiveMlExample}">Machine Learning</button>
+                <button @click="isActiveMlExample = true,isActiveMlExample2 = false" class="model-name-button" :class="{focusButton : isActiveMlExample}">Machine Learning</button>
             </div>
             <div class="model-button">
-                <button class="model-name-button">Machine Learning</button>
+                <button @click="isActiveMlExample2 = true,isActiveMlExample = false" class="model-name-button" :class="{focusButton : isActiveMlExample2}" >Machine Learning</button>
             </div>
             <div class="model-button">
                 <button class="model-name-button">Machine Learning</button>
@@ -51,7 +51,10 @@
         </div>
 
     </div>
-    <ExampleModel v-if="isActiveMlExample" />
+    <ExampleModel v-if="isActiveMlExample"/>
+    <ExampleModel2 v-else-if="isActiveMlExample2" />
+
+
 
 
 
@@ -59,16 +62,20 @@
 
 <script>
     import ExampleModel from "@/components/models/ExampleModel.vue"
+    import ExampleModel2 from "@/components/models/ExampleModel2.vue"
+
     export default {
         components : {
             ExampleModel : ExampleModel,
+            ExampleModel2 : ExampleModel2,
         },
         data() {
             return {
                 isActiveMain : true,
                 isActiveMl : false,
                 isActiveDl : false,
-                isActiveMlExample : false, /* Bu değiştirilmeli bu yöntem çok kod ister! */
+                isActiveMlExample : false,
+                isActiveMlExample2 : false, /* Bu değiştirilmeli bu yöntem çok kod ister! */
             };
         },
         methods:{
@@ -87,6 +94,7 @@
                 this.isActiveDl = false;
                 this.isActiveMl = false;
                 this.isActiveMlExample = false;
+                this.isActiveMlExample2 = false;
             },
         },
     }

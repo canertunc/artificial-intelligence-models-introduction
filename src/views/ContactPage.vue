@@ -42,6 +42,7 @@
         gap: 40px;
         border-radius: 4px;
         box-shadow: rgba(28, 23, 135, 0.24) 10px 3px 18px;
+        animation: fadeIn 1s ease-in-out forwards;
 
     }
     .mail-link {
@@ -64,5 +65,16 @@
     .footer-in-contact {
         margin-top: 200px;
     }
+
+    @keyframes fadeIn {
+  0% {
+    opacity: 0; /* Başlangıçta tamamen görünmez */
+    transform: translateY(20px); /* Y ekseninde 20 piksel yukarı kaydırılmış */
+  }
+  100% {
+    opacity: 1; /* Sonunda tamamen görünür */
+    transform: translateY(0); /* Y ekseninde hiç kaydırma yok */
+  }
+}
 
 </style>
