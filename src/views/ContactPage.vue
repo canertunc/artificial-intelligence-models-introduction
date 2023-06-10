@@ -11,9 +11,7 @@
         </div>
     </div>
 
-    <div class="footer-bar footer-in-contact">
-        <AppFooterSection />
-    </div>
+
 </template>
 
 <script>
@@ -42,7 +40,9 @@
         margin-left: 600px;
         margin-right: 600px;
         gap: 40px;
-        
+        border-radius: 4px;
+        box-shadow: rgba(28, 23, 135, 0.24) 10px 3px 18px;
+
     }
     .mail-link {
         text-decoration: none;

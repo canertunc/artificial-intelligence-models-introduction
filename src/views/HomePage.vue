@@ -11,9 +11,7 @@
             this website is for you. You will also have the chance to examine these models in detail.
         </div>
     </div>
-    <div class="footer-bar footer-in-home">
-        <AppFooterSection />
-    </div>
+
 </template>
 
 <style>

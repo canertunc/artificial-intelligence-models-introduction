@@ -13,9 +13,7 @@
             Caner Tunç
         </div>
     </div>
-    <div class="footer-bar footer-in-about">
-        <AppFooterSection />
-    </div>
+
 </template>
 
 <style>
@@ -30,6 +28,9 @@
         margin-left: 600px;
         margin-right: 600px;
         gap: 40px;
+        border-radius: 4px;
+        box-shadow: rgba(28, 23, 135, 0.24) 10px 3px 18px;
+
         
     }
     .about img {

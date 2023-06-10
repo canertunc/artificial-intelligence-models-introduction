@@ -68,3 +68,15 @@ body {
     width: 100px;
     height: 100px;
 }
+
+.models-page {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+
+
+
+
+}
