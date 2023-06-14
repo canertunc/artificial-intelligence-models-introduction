@@ -61,8 +61,8 @@
 </template>
 
 <script>
-    import ExampleModel from "@/components/models/ExampleModel.vue"
-    import ExampleModel2 from "@/components/models/ExampleModel2.vue"
+    import ExampleModel from "@/components/models-page/models/ExampleModel.vue"
+    import ExampleModel2 from "@/components/models-page/models/ExampleModel2.vue"
 
     export default {
         components : {
