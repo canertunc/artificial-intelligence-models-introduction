@@ -125,6 +125,7 @@
     box-shadow: rgba(28, 23, 135, 0.24) 10px 3px 18px;
     border-radius: 4px;
     animation: fadeIn 1s ease-in-out forwards;
+    margin-top: 158px;
 
 }
 

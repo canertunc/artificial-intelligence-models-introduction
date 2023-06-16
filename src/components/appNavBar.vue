@@ -1,5 +1,5 @@
 <template>
-    <div class="nav-bar">
+    <div class="nav-bar" :class="{ scrolled: isScrolled }">
   
       <div class="head">
         <div>
@@ -12,7 +12,8 @@
   
       <div class="links">
         <router-link class="page" to="/">Home</router-link>
-        <router-link class="page" to="/models">Models</router-link>
+        <router-link class="page" to="/modelverse">ModelVerse</router-link>
+        <router-link class="page" to="/modelguide">ModelGuide</router-link>
         <router-link class="page" to="/about">About</router-link>
         <router-link class="page" to="/contact">Contact</router-link>
       </div>
@@ -21,6 +22,31 @@
     <router-view></router-view>
   </template>
   
+
+<script>
+
+  export default {
+    data(){
+      return {
+        isScrolled : false
+      }
+    },
+    mounted() {
+    window.addEventListener('scroll', this.handleScroll);
+  },
+  beforeUnmount() {
+    window.removeEventListener('scroll', this.handleScroll);
+  },
+  methods: {
+    handleScroll() {
+      this.isScrolled = window.scrollY > 0;
+    }
+  }
+  }
+
+
+</script>
+
   <style>
   
   .head {
@@ -29,6 +55,13 @@
     flex-direction: row;
     align-items: center;
   
+  }
+  .nav-bar {
+    position: fixed;
+    transition: background-color 0.1s ease;
+  }
+  .scrolled {
+    background-color: black;
   }
   
   </style>

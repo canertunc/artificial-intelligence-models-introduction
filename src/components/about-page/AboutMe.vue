@@ -1,5 +1,6 @@
 <template>
-    <div class="about">
+    <div class="about-page">
+        <div class="about">
         <div class="about-logo">
             <img src="@/assets/personal-logo.jpg" alt="logo">
         </div>
@@ -13,16 +14,18 @@
             Caner Tunç
         </div>
     </div>
+    </div>
 
 </template>
 
 <style>
+  
     .about {
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        margin-top: 134px;
+        margin-top: 254px;
         background-color: black;
         opacity: 0.9;
         margin-left: 600px;
@@ -31,6 +34,7 @@
         border-radius: 4px;
         box-shadow: rgba(28, 23, 135, 0.24) 10px 3px 18px;
         animation: fadeIn 1s ease-in-out forwards;
+
         
     }
     .about img {

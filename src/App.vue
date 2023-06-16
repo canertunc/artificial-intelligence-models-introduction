@@ -13,3 +13,8 @@ import appNavBar from './components/appNavBar.vue';
   }
 
 </script>
+
+<style>
+
+ 
+</style>

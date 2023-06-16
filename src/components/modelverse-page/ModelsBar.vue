@@ -61,8 +61,8 @@
 </template>
 
 <script>
-    import ExampleModel from "@/components/models-page/models/ExampleModel.vue"
-    import ExampleModel2 from "@/components/models-page/models/ExampleModel2.vue"
+    import ExampleModel from "@/components/modelverse-page/models/ExampleModel.vue"
+    import ExampleModel2 from "@/components/modelverse-page/models/ExampleModel2.vue"
 
     export default {
         components : {
@@ -111,6 +111,7 @@
     justify-content: space-around;
     flex-direction: column;
     border: 1px rgb(20, 20, 20) solid;
+    margin-top: 140px;
 }
 
 .main-bar h3 {

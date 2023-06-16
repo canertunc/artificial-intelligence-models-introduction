@@ -1,5 +1,6 @@
 <template>
-    <div class="home">
+    <div class="home-first">
+        <div class="home">
         <div class="home-head">
             SO, YOU WANT TO TRAVEL TO
         </div>
@@ -10,25 +11,145 @@
             Let's face it, if you want to try models that use machine learning and deep learning algorithms,
             this website is for you. You will also have the chance to examine these models in detail.
         </div>
+    </div>  
+    </div>
+    <div class="home-modelverse">
+        <div class="home-modelverse-head">
+            <div>
+                <hr>
+                <h2>ModelVerse</h2>
+            </div>
+            <div>
+                <hr>
+                <p>You can use models!</p>
+            </div>
+        </div>
+        <div class="home-modelverse-body">
+            <router-link to="/modelguide/examplemodel1guide" class="router-link-below"><div class="model1"><img src="@/assets/rocket.jpg" alt=""><h4>Bank Cheater Detecting</h4></div></router-link>
+            <router-link to="/modelguide" class="router-link-below"><div class="model2"><img src="@/assets/spaceship.jpg" alt=""><h4>Bank Cheater Detecting</h4></div></router-link>
+            <router-link to="/modelguide" class="router-link-below"><div class="model3"><img src="@/assets/rocket.jpg" alt=""><h4>Bank Cheater Detecting</h4></div></router-link>
+            <router-link to="/modelguide" class="router-link-below"><div class="model4"><img src="@/assets/spaceship.jpg" alt=""><h4>Bank Cheater Detecting</h4></div></router-link>
+        </div>
+    </div>
+
+    <div class="home-modelguide">
+        
+        <div class="home-modelguide-head">
+            <div>
+                <hr>
+                <h2>Model Guide</h2>
+            </div>
+            <div>
+                <hr>
+                <p>You can read details about models!</p>
+            </div>
+        </div>
+        <div class="home-modelguide-body">
+            <router-link to="/modelguide/examplemodel1guide" class="router-link-below"><div class="model1"><img src="@/assets/rocket.jpg" alt=""><h4>Bank Cheater Detecting</h4></div></router-link>
+            <router-link to="/modelguide/examplemodel1guide" class="router-link-below"><div class="model2"><img src="@/assets/spaceship.jpg" alt=""><h4>Bank Cheater Detecting</h4></div></router-link>
+            <router-link to="/modelguide/examplemodel1guide" class="router-link-below"><div class="model3"><img src="@/assets/rocket.jpg" alt=""><h4>Bank Cheater Detecting</h4></div></router-link>
+            <router-link to="/modelguide/examplemodel1guide" class="router-link-below"><div class="model4"><img src="@/assets/spaceship.jpg" alt=""><h4>Bank Cheater Detecting</h4></div></router-link>
+        </div>
     </div>
 
 </template>
 
 <style>
-
-    
-    .home {
-        animation: slideInLeft 1.5s ease-in-out forwards;
+    .router-link-below {
+        text-decoration: none;
+        border: 0;
+        color: aliceblue;
     }
-@keyframes slideInLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(-20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
+    
+    .home-first {
+        background-image: url("@/assets/background.png");
+        background-size: 100%;
+        width: 1627px;
+        height: 838px;
+    }
+
+
+
+
+    .home-modelverse {
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        background-color: black;
+        height: 670px;
+    }
+
+    .home-modelverse-head {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 800px;
+    }
+    .home-modelverse-head,.home-modelguide-head h2 {
+        font-size: 40px;
+    }
+    .home-modelverse-head,.home-modelguide-head p {
+        font-size: 30px;
+    }
+
+    .home-modelverse-body  {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        margin-top: 35px;
+    }
+
+    .home-modelverse-body img {
+        width: 330px;
+        height: 330px;
+    }
+
+    .home-modelguide {
+        display: flex;
+        flex-direction: column;
+        background-color: black;
+        height: 670px;
+    }
+    .home-modelguide-head {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 535px;
+    }
+    .home-modelguide-body  {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        margin-top: 35px;
+    }
+
+    .home-modelguide-body img {
+        width: 330px;
+        height: 330px;
+    }
+
+
+
+
+    .home {
+        animation: slideInLeft 1.5s ease-in-out ;
+        
+    }
+    @keyframes slideInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 </style>

@@ -36,7 +36,7 @@
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        margin-top: 134px;
+        margin-top: 254px;
         background-color: black;
         opacity: 0.9;
         margin-left: 600px;
