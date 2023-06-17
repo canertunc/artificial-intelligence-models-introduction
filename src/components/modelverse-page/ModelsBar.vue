@@ -1,27 +1,29 @@
 <template>
-    <div v-if="isActiveMain" class="main-bar">
+    <div v-if="$store.state.mainButton" class="main-bar">
         <div class="bar-header">
             <h3>Models</h3>
         </div>
         <div class="choices-bar">
             <div class="ml">
-                <button @click = "doActiveMl" class="model-name-button">Machine Learning</button>
+                <button @click="doActiveMl" class="model-name-button">Machine Learning</button>
             </div>
             <div class="dl">
-                <button @click = "doActiveDl" class="model-name-button">Deep Learning</button>
+                <button @click="doActiveDl" class="model-name-button">Deep Learning</button>
             </div>
         </div>
     </div>
-    <div v-else-if="isActiveMl" class="main-bar" >
-        <div class="bar-header" >
+    <div v-else-if="$store.state.machineLearningButton" class="main-bar">
+        <div class="bar-header">
             <h3>Machine Learning</h3>
         </div>
         <div class="choices-bar">
             <div class="model-button">
-                <button @click="isActiveMlExample = true,isActiveMlExample2 = false" class="model-name-button" :class="{focusButton : isActiveMlExample}">Machine Learning</button>
+                <button @click="doActiveModel(1)" class="model-name-button"
+                    :class="{ focusButton: $store.state.models.isActiveMlExample.isActive }">Machine Learning</button>
             </div>
             <div class="model-button">
-                <button @click="isActiveMlExample2 = true,isActiveMlExample = false" class="model-name-button" :class="{focusButton : isActiveMlExample2}" >Machine Learning</button>
+                <button @click="doActiveModel(2)" class="model-name-button"
+                    :class="{ focusButton: $store.state.models.isActiveMlExample2.isActive }">Machine Learning</button>
             </div>
             <div class="model-button">
                 <button class="model-name-button">Machine Learning</button>
@@ -51,53 +53,54 @@
         </div>
 
     </div>
-    <ExampleModel v-if="isActiveMlExample"/>
-    <ExampleModel2 v-else-if="isActiveMlExample2" />
-
-
-
-
-
+    <ExampleModel v-if="$store.state.models.isActiveMlExample.isActive" />
+    <ExampleModel2 v-else-if="$store.state.models.isActiveMlExample2.isActive" />
 </template>
 
 <script>
-    import ExampleModel from "@/components/modelverse-page/models/ExampleModel.vue"
-    import ExampleModel2 from "@/components/modelverse-page/models/ExampleModel2.vue"
+import ExampleModel from "@/components/modelverse-page/models/ExampleModel.vue"
+import ExampleModel2 from "@/components/modelverse-page/models/ExampleModel2.vue"
 
-    export default {
-        components : {
-            ExampleModel : ExampleModel,
-            ExampleModel2 : ExampleModel2,
+export default {
+    beforeUnmount(){
+        this.doActiveModel(0)
+        this.$store.state.mainButton = true
+    },
+    components: {
+        ExampleModel: ExampleModel,
+        ExampleModel2: ExampleModel2,
+    },
+    methods: {
+        doActiveMl() {
+            this.$store.state.mainButton = false;
+            this.$store.state.machineLearningButton = true,
+            this.$store.state.deepLearningButton = false
         },
-        data() {
-            return {
-                isActiveMain : true,
-                isActiveMl : false,
-                isActiveDl : false,
-                isActiveMlExample : false,
-                isActiveMlExample2 : false, /* Bu değiştirilmeli bu yöntem çok kod ister! */
-            };
+        doActiveDl() {
+            this.$store.state.mainButton = false;
+            this.$store.state.machineLearningButton = false,
+            this.$store.state.deepLearningButton = true
         },
-        methods:{
-            doActiveMl(){
-                this.isActiveMain = false;
-                this.isActiveDl = false;
-                this.isActiveMl = true;
-            },
-            doActiveDl(){
-                this.isActiveMain = false;
-                this.isActiveDl = true;
-                this.isActiveMl = false;
-            },
-            doActiveMain(){
-                this.isActiveMain = true;
-                this.isActiveDl = false;
-                this.isActiveMl = false;
-                this.isActiveMlExample = false;
-                this.isActiveMlExample2 = false;
-            },
+        doActiveMain() {
+            this.$store.state.mainButton = true;
+            this.$store.state.machineLearningButton = false,
+            this.$store.state.deepLearningButton = false
+            this.doActiveModel(0);
         },
-    }
+        doActiveModel(modelId) {
+
+            for (let key in this.$store.state.models) {
+                if(this.$store.state.models[key].id == modelId) {
+                    this.$store.state.models[key].isActive = true;
+                    }
+                    else {
+                        this.$store.state.models[key].isActive = false;
+                    }
+            }
+
+        },
+    },
+}
 
 </script>
 
@@ -105,7 +108,8 @@
 .main-bar {
     background-color: black;
     opacity: 0.7;
-    height: 691px; /* 693px */
+    height: 691px;
+    /* 693px */
     width: 300px;
     display: flex;
     justify-content: space-around;
@@ -128,6 +132,7 @@
     margin-top: 40px;
     margin-bottom: 100px;
 }
+
 .model-button {
     text-align: center;
     margin-top: 20px;
@@ -142,17 +147,20 @@
     background-color: black;
     color: aliceblue;
     cursor: pointer;
-    transition:0.5s;
+    transition: 0.5s;
     opacity: 0.5;
 
 }
+
 .model-name-button:hover {
     border: 1px aliceblue solid;
     opacity: 1;
 }
+
 .back {
     text-align: center;
 }
+
 .back button {
     width: 125px;
     height: 30px;
@@ -166,16 +174,14 @@
     transition: 0.5s;
     opacity: 0.5;
 }
+
 .back button:hover {
     border: 1px aliceblue solid;
     opacity: 1;
 }
+
 .focusButton {
     border: 1px aliceblue solid;
     opacity: 1;
 }
-
-
-
-
 </style>
