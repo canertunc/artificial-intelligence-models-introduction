@@ -19,7 +19,7 @@
         <div class="choices-bar">
             <div class="model-button">
                 <button @click="doActiveModel(1)" class="model-name-button"
-                    :class="{ focusButton: $store.state.models.isActiveMlExample.isActive }">Machine Learning</button>
+                    :class="{ focusButton: $store.state.models.isActiveMlExample.isActive }">Bank Fraud Detecting</button>
             </div>
             <div class="model-button">
                 <button @click="doActiveModel(2)" class="model-name-button"
@@ -106,7 +106,7 @@ export default {
 
 <style>
 .main-bar {
-    background-color: black;
+    background-color: rgb(8, 8, 23);
     opacity: 0.7;
     height: 691px;
     /* 693px */

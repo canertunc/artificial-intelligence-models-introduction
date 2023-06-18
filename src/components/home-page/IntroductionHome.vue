@@ -27,7 +27,7 @@
         <div class="home-modelverse-body">
             <router-link to="/modelverse" class="router-link-below" @click = "doActiveModel(1)">
                 <div class="model1"><img src="@/assets/rocket.jpg" alt="">
-                    <h4>Bank Cheater Detecting</h4>
+                    <h4>Bank Fraud Detecting</h4>
                 </div>
             </router-link>
             <router-link to="/modelverse" class="router-link-below" @click = "doActiveModel(2)">
@@ -63,49 +63,67 @@
         <div class="home-modelguide-body">
             <router-link to="/modelguide/examplemodel1guide" class="router-link-below">
                 <div class="model1">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est accusantium corporis harum perspiciatis,
-                        quod delectus, facilis autem tenetur in iure, vero iste voluptas eligendi? Voluptatibus nam alias
-                        quibusdam, odit quia consequuntur. Nesciunt hic non voluptatibus? Blanditiis nam repudiandae vero
-                        mollitia numquam consequuntur, facilis nostrum exercitationem modi architecto dicta optio minus
-                        aperiam corrupti quibusdam. Necessitatibus, numquam ...</p>
-                    <h4>Bank Cheater Detecting</h4>
+                    <p>Bank fraud detection model is a type of model that is frequently used in banks. This model gives an
+                    output according to whether the bank is likely to be defrauded according to the information of the
+                    customers. This model is coded with support vector machines, which is one of the machine learning
+                    algorithms ...</p>
+                    <h4>Bank Fraud Detecting</h4>
                 </div>
             </router-link>
             <router-link to="/modelguide/examplemodel1guide" class="router-link-below">
                 <div class="model2">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est accusantium corporis harum perspiciatis,
-                        quod delectus, facilis autem tenetur in iure, vero iste voluptas eligendi? Voluptatibus nam alias
-                        quibusdam, odit quia consequuntur. Nesciunt hic non voluptatibus? Blanditiis nam repudiandae vero
-                        mollitia numquam consequuntur, facilis nostrum exercitationem modi architecto dicta optio minus
-                        aperiam corrupti quibusdam. Necessitatibus, numquam ...</p>
-                    <h4>Bank Cheater Detecting</h4>
+                    <p>Bank fraud detection model is a type of model that is frequently used in banks. This model gives an
+                    output according to whether the bank is likely to be defrauded according to the information of the
+                    customers. This model is coded with support vector machines, which is one of the machine learning
+                    algorithms ...</p>
+                    <h4>Bank Fraud Detecting</h4>
                 </div>
             </router-link>
             <router-link to="/modelguide/examplemodel1guide" class="router-link-below">
                 <div class="model3">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est accusantium corporis harum perspiciatis,
-                        quod delectus, facilis autem tenetur in iure, vero iste voluptas eligendi? Voluptatibus nam alias
-                        quibusdam, odit quia consequuntur. Nesciunt hic non voluptatibus? Blanditiis nam repudiandae vero
-                        mollitia numquam consequuntur, facilis nostrum exercitationem modi architecto dicta optio minus
-                        aperiam corrupti quibusdam. Necessitatibus, numquam ...</p>
-                    <h4>Bank Cheater Detecting</h4>
+                    <p>Bank fraud detection model is a type of model that is frequently used in banks. This model gives an
+                    output according to whether the bank is likely to be defrauded according to the information of the
+                    customers. This model is coded with support vector machines, which is one of the machine learning
+                    algorithms ...</p>
+                    <h4>Bank Fraud Detecting</h4>
                 </div>
             </router-link>
             <router-link to="/modelguide/examplemodel1guide" class="router-link-below">
                 <div class="model4">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est accusantium corporis harum perspiciatis,
-                        quod delectus, facilis autem tenetur in iure, vero iste voluptas eligendi? Voluptatibus nam alias
-                        quibusdam, odit quia consequuntur. Nesciunt hic non voluptatibus? Blanditiis nam repudiandae vero
-                        mollitia numquam consequuntur, facilis nostrum exercitationem modi architecto dicta optio minus
-                        aperiam corrupti quibusdam. Necessitatibus, numquam ...</p>
-                    <h4>Bank Cheater Detecting</h4>
+                    <p>Bank fraud detection model is a type of model that is frequently used in banks. This model gives an
+                    output according to whether the bank is likely to be defrauded according to the information of the
+                    customers. This model is coded with support vector machines, which is one of the machine learning
+                    algorithms ...</p>
+                    <h4>Bank Fraud Detecting</h4>
                 </div>
             </router-link>
         </div>
     </div>
+
+    <footer>
+        <hr>
+        <div class="contact-github-linkedln">
+            <div class="contact-images">
+                <a :href="twitterURL" target = "blank"><img src="@/assets/twitter-icon.png" alt="twitter-icon"></a>
+                <a :href="githubURL" target = "blank"><img src="@/assets/github-icon.png" alt="github-icon"></a>
+                <a :href="linkedlnURL" target = "blank"><img src="@/assets/linkedln-icon.png" alt="linkedln-icon"></a>
+            </div>
+        </div>
+        <div class="footer-name">
+            DopingAI © 2022-2023
+        </div>
+    </footer>
+
 </template>
 <script>
 export default {
+    data() {
+        return {
+            githubURL : "https://github.com/canertunc",
+            linkedlnURL : "https://www.linkedin.com/in/caner-tun%C3%A7-7592291b8/",
+            twitterURL : "https://twitter.com/"
+        }
+    },
     methods: {
         doActiveModel(modelId) {
 
@@ -132,6 +150,17 @@ export default {
 </script>
 
 <style>
+.footer-name {
+    margin-bottom: 20px;
+}
+.contact-github-linkedln {
+    margin-top: 150px;
+}
+footer {
+    text-align: center;
+    margin-top: 50px;
+
+}
 .router-link-below {
     text-decoration: none;
     border: 0;

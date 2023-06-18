@@ -22,7 +22,7 @@
 <style>
     .models-page {
  
-        background-image: url("@/assets/modelverse-backgorund.jpg");
+        background-image: url("@/assets/bg2.png");
         background-size: 100%;
 
     }

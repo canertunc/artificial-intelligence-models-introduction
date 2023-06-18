@@ -1,11 +1,10 @@
 <template>
-
     <div class="example-model-1">
 
         <div class="example-model-1-head">
-            <h2>EXAMPLE MODEL 1</h2>
+            <h2>BANK FRAUD DETECTING</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, quibusdam.</p>
-            <button class="try-button">Try</button>
+            <router-link to="/modelverse"><button class="try-button" @click="doActiveModel(1)">Try</button></router-link>
         </div>
 
         <div class="example-model-1-image">
@@ -14,7 +13,19 @@
             </div>
         </div>
         <div class="example-model-1-body">
-            <div><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci minus cupiditate placeat enim rerum numquam ipsa consequuntur sunt tempore similique sit laboriosam ullam, ea officia optio nobis dolorum corporis quis! Minus repellendus consequuntur minima, a odio adipisci esse error? Aliquam dolor eaque, ipsa ea quod libero nam ipsum impedit temporibus laborum rem, sed in vero magnam natus alias odit sint adipisci assumenda quo recusandae consequuntur incidunt. Delectus nemo sunt tempore a laboriosam repudiandae voluptas adipisci incidunt blanditiis debitis nobis animi et quidem mollitia quasi maxime earum, ipsum quam reprehenderit facilis vitae iusto? Dignissimos eaque libero amet quidem repellendus commodi! Similique accusamus error veritatis laborum. Earum praesentium, est nisi accusantium necessitatibus perferendis vitae tempore. Quasi velit possimus facere ipsam mollitia sunt quia architecto magnam laboriosam dolore vitae, perferendis voluptas qui officiis, eius itaque sit ex accusantium cupiditate saepe atque aliquam odit omnis! Modi dignissimos fugiat voluptatum alias neque, consequatur iure. Fugiat veritatis, aperiam molestias est consectetur rerum quos tenetur sequi ad vitae eligendi, quam accusantium fuga a asperiores perferendis placeat harum architecto, sapiente qui autem id! Fugiat pariatur beatae, quidem laudantium facere sunt autem incidunt eaque exercitationem deleniti, vero, ab tempora? Illo ex sed accusantium aliquid! Consequuntur, cum! Iusto, minima impedit?</p></div>
+            <div>
+                <p>
+                    Bank fraud detection model is a type of model that is frequently used in banks. This model gives an
+                    output according to whether the bank is likely to be defrauded according to the information of the
+                    customers. This model is coded with support vector machines, which is one of the machine learning
+                    algorithms. The data telling percentage of the inputs is 97 percent, which is quite good. In addition,
+                    the accuracy rate of the model is 85.54%. The most important input of the model is the isCreditCar
+                    input, which can be thought to be due to the trust of customers with credit cards in the bank, in this
+                    case the customer is less likely to defraud the bank. Another important input is the isActiveMember
+                    input, which shows us the activeness of the customer (for the last 1 year). Non-users are more likely to
+                    be scammed. Below are the inputs in the model and their descriptions. If you want to get more detailed
+                    information about the model, you can contact us from the contact section..</p>
+            </div>
             <div class="table-model-1">
                 <table id="inputs-1">
                     <tr>
@@ -60,13 +71,35 @@
 </template>
 
 <script>
+export default {
+    methods: {
+        doActiveModel(modelId) {
 
+            for (let key in this.$store.state.models) {
+                if (this.$store.state.models[key].id == modelId) {
+                    this.$store.state.models[key].isActive = true;
+                    if (this.$store.state.models[key].ml === true) {
+                        this.$store.state.machineLearningButton = true;
+                    }
+                    else {
+                        this.$store.state.deepLearningButton = true
+                    }
+                    this.$store.state.mainButton = false
+                }
+                else {
+                    this.$store.state.models[key].isActive = false;
+                }
+            }
+
+        },
+    }
+}
 
 </script>
 
 
 <style>
-      .example-model-1 {
+.example-model-1 {
     width: 1627px;
     height: auto;
     background-color: black;
@@ -75,31 +108,36 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-  }
-  .example-model-1-head {
+}
+
+.example-model-1-head {
     margin-top: 400px;
-  }
-  .example-model-1-head h2 {
+}
+
+.example-model-1-head h2 {
     font-size: 50px
-  }
-  .example-model-1-head p {
+}
+
+.example-model-1-head p {
     font-size: 20px;
-  }
-  .example-model-1-image {
+}
+
+.example-model-1-image {
     margin-top: 300px;
-  }
-  .example-model-1-body {
+}
+
+.example-model-1-body {
     margin-top: 300px;
     display: flex;
     flex-direction: column;
     width: 700px;
     padding: 30px 30px;
-  }
+}
 
-  #inputs-1{
+#inputs-1 {
     width: 100%;
     font: bold 1.25em "Trebuchet MS", Verdana, Arial, Helvetica,
-    sans-serif;
+        sans-serif;
     border: 12px solid #505050;
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -110,21 +148,23 @@
     font-size: 13px;
     margin-top: 50px;
 }
- 
-#inputs-1 th{
-color: #41AA7F;
-padding: 6px 6px 6px 12px;
- 
+
+#inputs-1 th {
+    color: #41AA7F;
+    padding: 6px 6px 6px 12px;
+
 }
-#inputs-1 tr{
-color: #112233;
-background: #fff;
-cursor: pointer;
-border-bottom: 3px solid #505050;
+
+#inputs-1 tr {
+    color: #112233;
+    background: #fff;
+    cursor: pointer;
+    border-bottom: 3px solid #505050;
 }
-#inputs-1 tr:hover{
-background:#202020;
-color:#fff;
+
+#inputs-1 tr:hover {
+    background: #202020;
+    color: #fff;
 }
 
 .try-button {
@@ -136,11 +176,8 @@ color:#fff;
     color: aliceblue;
     font-size: 15px;
 }
+
 .try-button:hover {
     background-color: aliceblue;
     color: black;
-}
-  
-
-
-</style>
+}</style>

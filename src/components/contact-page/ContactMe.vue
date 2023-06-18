@@ -1,6 +1,6 @@
 <template>
     <div class="contact">
-        <div class="contact-head">
+        <!-- <div class="contact-head">
             <p>You can reach us at the addresses below to make any suggestions.</p>
         </div>
         <div class="contact-mail">
@@ -8,11 +8,31 @@
         </div>
         <div class="contact-github-linkedln">
             <div class="contact-images">
+                <a :href="twitterURL" target = "blank"><img src="@/assets/twitter-icon.png" alt="twitter-icon"></a>
                 <a :href="githubURL" target = "blank"><img src="@/assets/github-icon.png" alt="github-icon"></a>
                 <a :href="linkedlnURL" target = "blank"><img src="@/assets/linkedln-icon.png" alt="linkedln-icon"></a>
             </div>
-        </div>
+        </div> -->
+
+        
+    <div class="container">
+        <h2>Contact Form</h2>
+        <form action="#" method="post">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Your Email Address:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
     </div>
+
+    </div>
+
 
 
 </template>
@@ -24,6 +44,7 @@
                 mailURL : "mailto:canertunc982@gmail.com",
                 githubURL : "https://github.com/canertunc",
                 linkedlnURL : "https://www.linkedin.com/in/caner-tun%C3%A7-7592291b8/",
+                twitterURL : "https://twitter.com/"
             }
         },
     };
@@ -31,6 +52,45 @@
 </script>
 
 <style>
+
+.container {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: black;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .container label,
+        .container input,
+        .container textarea {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        .container textarea {
+            height: 100px;
+        }
+
+        .container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        .container button:hover {
+            background-color: #45a049;
+        }
     .contact {
         display: flex;
         align-items: center;
