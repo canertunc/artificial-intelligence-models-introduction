@@ -14,6 +14,7 @@
         <router-link class="page" to="/">Home</router-link>
         <router-link class="page" to="/modelverse">ModelVerse</router-link>
         <router-link class="page" to="/modelguide">ModelGuide</router-link>
+        <router-link class="page" to="/algorithmspage">Algorithms</router-link>
         <router-link class="page" to="/about">About</router-link>
         <router-link class="page" to="/contact">Contact</router-link>
       </div>

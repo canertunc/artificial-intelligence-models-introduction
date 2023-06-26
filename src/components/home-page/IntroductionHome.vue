@@ -25,22 +25,22 @@
             </div>
         </div>
         <div class="home-modelverse-body">
-            <router-link to="/modelverse" class="router-link-below" @click = "doActiveModel(1)">
+            <router-link to="/modelverse" class="router-link-below" @click="doActiveModel(1)">
                 <div class="model1"><img src="@/assets/rocket.jpg" alt="">
                     <h4>Bank Fraud Detecting</h4>
                 </div>
             </router-link>
-            <router-link to="/modelverse" class="router-link-below" @click = "doActiveModel(2)">
+            <router-link to="/modelverse" class="router-link-below" @click="doActiveModel(2)">
                 <div class="model2"><img src="@/assets/spaceship.jpg" alt="">
                     <h4>Bank Cheater Detecting</h4>
                 </div>
             </router-link>
-            <router-link to="/modelverse" class="router-link-below" @click = "doActiveModel(1)">
+            <router-link to="/modelverse" class="router-link-below" @click="doActiveModel(1)">
                 <div class="model3"><img src="@/assets/rocket.jpg" alt="">
                     <h4>Bank Cheater Detecting</h4>
                 </div>
             </router-link>
-            <router-link to="/modelverse" class="router-link-below" @click = "doActiveModel(2)">
+            <router-link to="/modelverse" class="router-link-below" @click="doActiveModel(2)">
                 <div class="model4"><img src="@/assets/spaceship.jpg" alt="">
                     <h4>Bank Cheater Detecting</h4>
                 </div>
@@ -64,65 +64,88 @@
             <router-link to="/modelguide/examplemodel1guide" class="router-link-below">
                 <div class="model1">
                     <p>Bank fraud detection model is a type of model that is frequently used in banks. This model gives an
-                    output according to whether the bank is likely to be defrauded according to the information of the
-                    customers. This model is coded with support vector machines, which is one of the machine learning
-                    algorithms ...</p>
+                        output according to whether the bank is likely to be defrauded according to the information of the
+                        customers. This model is coded with support vector machines, which is one of the machine learning
+                        algorithms ...</p>
                     <h4>Bank Fraud Detecting</h4>
                 </div>
             </router-link>
             <router-link to="/modelguide/examplemodel1guide" class="router-link-below">
                 <div class="model2">
                     <p>Bank fraud detection model is a type of model that is frequently used in banks. This model gives an
-                    output according to whether the bank is likely to be defrauded according to the information of the
-                    customers. This model is coded with support vector machines, which is one of the machine learning
-                    algorithms ...</p>
+                        output according to whether the bank is likely to be defrauded according to the information of the
+                        customers. This model is coded with support vector machines, which is one of the machine learning
+                        algorithms ...</p>
                     <h4>Bank Fraud Detecting</h4>
                 </div>
             </router-link>
             <router-link to="/modelguide/examplemodel1guide" class="router-link-below">
                 <div class="model3">
                     <p>Bank fraud detection model is a type of model that is frequently used in banks. This model gives an
-                    output according to whether the bank is likely to be defrauded according to the information of the
-                    customers. This model is coded with support vector machines, which is one of the machine learning
-                    algorithms ...</p>
+                        output according to whether the bank is likely to be defrauded according to the information of the
+                        customers. This model is coded with support vector machines, which is one of the machine learning
+                        algorithms ...</p>
                     <h4>Bank Fraud Detecting</h4>
                 </div>
             </router-link>
             <router-link to="/modelguide/examplemodel1guide" class="router-link-below">
                 <div class="model4">
                     <p>Bank fraud detection model is a type of model that is frequently used in banks. This model gives an
-                    output according to whether the bank is likely to be defrauded according to the information of the
-                    customers. This model is coded with support vector machines, which is one of the machine learning
-                    algorithms ...</p>
+                        output according to whether the bank is likely to be defrauded according to the information of the
+                        customers. This model is coded with support vector machines, which is one of the machine learning
+                        algorithms ...</p>
                     <h4>Bank Fraud Detecting</h4>
                 </div>
             </router-link>
         </div>
     </div>
 
-    <footer>
-        <hr>
-        <div class="contact-github-linkedln">
-            <div class="contact-images">
-                <a :href="twitterURL" target = "blank"><img src="@/assets/twitter-icon.png" alt="twitter-icon"></a>
-                <a :href="githubURL" target = "blank"><img src="@/assets/github-icon.png" alt="github-icon"></a>
-                <a :href="linkedlnURL" target = "blank"><img src="@/assets/linkedln-icon.png" alt="linkedln-icon"></a>
+    <div class="home-algorithms">
+
+        <div class="home-algorithms-head">
+            <div>
+                <hr>
+                <h2>Algorithms</h2>
+            </div>
+            <div>
+                <hr>
+                <p>You can read details about algorithms!</p>
             </div>
         </div>
-        <div class="footer-name">
-            DopingAI © 2022-2023
+        <div class="home-algorithms-body">
+            <router-link to="/algorithmspage/suportvectormachines" class="router-link-below">
+                <div class="model1">
+                    <img src="../../assets//svm.png" alt="">
+                    <h4>Support Vector Machines</h4>
+                </div>
+            </router-link>
+            <router-link to="/algorithmspage/suportvectormachines" class="router-link-below">
+                <div class="model2">
+                    <img src="../../assets//svm.png" alt="">
+                    <h4>Support Vector Machines</h4>
+                </div>
+            </router-link>
+            <router-link to="/algorithmspage/suportvectormachines" class="router-link-below">
+                <div class="model3">
+                    <img src="../../assets//svm.png" alt="">
+                    <h4>Support Vector Machines</h4>
+                </div>
+            </router-link>
+            <router-link to="/algorithmspage/suportvectormachines" class="router-link-below">
+                <div class="model4">
+                    <img src="../../assets//svm.png" alt="">
+                    <h4>Support Vector Machines</h4>
+                </div>
+            </router-link>
         </div>
-    </footer>
-
+    </div>
+    <app-footer />
 </template>
 <script>
+import appFooter from "@/components/appFooter.vue"
 export default {
-    data() {
-        return {
-            githubURL : "https://github.com/canertunc",
-            linkedlnURL : "https://www.linkedin.com/in/caner-tun%C3%A7-7592291b8/",
-            twitterURL : "https://twitter.com/"
-        }
+    components: {
+        appFooter: appFooter,
     },
     methods: {
         doActiveModel(modelId) {
@@ -153,14 +176,17 @@ export default {
 .footer-name {
     margin-bottom: 20px;
 }
+
 .contact-github-linkedln {
     margin-top: 150px;
 }
+
 footer {
     text-align: center;
     margin-top: 50px;
 
 }
+
 .router-link-below {
     text-decoration: none;
     border: 0;
@@ -194,12 +220,14 @@ footer {
 }
 
 .home-modelverse-head,
-.home-modelguide-head h2 {
+.home-modelguide-head,
+.home-algorithms-head h2 {
     font-size: 40px;
 }
 
 .home-modelverse-head,
-.home-modelguide-head p {
+.home-modelguide-head,
+.home-algorithms-head p {
     font-size: 30px;
 }
 
@@ -223,6 +251,7 @@ footer {
     flex-direction: column;
     background-color: black;
     height: 670px;
+    margin-top: 70px;
 }
 
 .home-modelguide-head {
@@ -255,8 +284,31 @@ footer {
     padding-top: 5px;
 }
 
-
-
+.home-algorithms {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    height: 670px;
+}
+.home-algorithms-head {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 535px;
+}
+.home-algorithms-body {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-top: 35px;
+}
+.home-algorithms-body img {
+    width: 330px;
+    height: 330px;
+}
 
 .home {
     animation: slideInLeft 1.5s ease-in-out;
@@ -273,4 +325,5 @@ footer {
         opacity: 1;
         transform: translateX(0);
     }
-}</style>
+}
+</style>

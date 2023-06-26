@@ -22,10 +22,10 @@
             <input type="text" id="name" name="name" required>
 
             <label for="email">Your Email Address:</label>
-            <input type="email" id="email" name="email" required>
+            <input type="email" id="email" name="email" placeholder="info@example.com" required>
 
             <label for="message">Your Message:</label>
-            <textarea id="message" name="message" required></textarea>
+            <textarea id="message" name="message"  required></textarea>
 
             <button type="submit">Submit</button>
         </form>
@@ -73,6 +73,7 @@
             display: block;
             width: 100%;
             margin-bottom: 10px;
+            width: 400px;
         }
 
         .container textarea {

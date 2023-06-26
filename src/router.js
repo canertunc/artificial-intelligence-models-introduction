@@ -5,6 +5,8 @@ import ModelguidePage from "@/views/ModelguidePage.vue"
 import ContactPage from "@/views/ContactPage.vue"
 import ModelversePage from "@/views/ModelversePage.vue"
 import ExampleModel1Guide from "@/components/modelguide-page/models/ExampleModel1Guide.vue"
+import AlgorithmsPage from "@/views/AlgorithmsPage.vue"
+import Algorithm1 from "@/components/algorithms-page/algorithms/SupportVectorMachines.vue"
 
 const routes = [
 
@@ -32,6 +34,13 @@ const routes = [
     {
         path : "/modelguide/examplemodel1guide",
         component : ExampleModel1Guide,
+    },    
+    {
+        path : "/algorithmspage",
+        component : AlgorithmsPage,
+    },    {
+        path : "/algorithmspage/suportvectormachines",
+        component : Algorithm1,
     },
     
 ]

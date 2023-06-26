@@ -9,7 +9,7 @@
 
         <div class="example-model-1-image">
             <div>
-                <img src="@/assets/rocket.jpg" alt="">
+                <img src="@/assets/Banking-Fraud.jpg" alt="">
             </div>
         </div>
         <div class="example-model-1-body">
@@ -30,48 +30,53 @@
                 <table id="inputs-1">
                     <tr>
                         <td>Credit Score:</td>
-                        <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, similique.</td>
+                        <td>It contains the credit score information given to you by the bank, for example, it can be 1200 points.</td>
                     </tr>
                     <tr>
                         <td>Geography:</td>
-                        <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, similique.</td>
+                        <td>Represents the country you live in. This entry can be france, spain or germany.</td>
                     </tr>
                     <tr>
                         <td>Gender:</td>
-                        <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, similique.</td>
+                        <td>It represents gender. can be male or female.</td>
                     </tr>
                     <tr>
                         <td>Age:</td>
-                        <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, similique.</td>
+                        <td>It represents the age. The age range should be 18-125.</td>
                     </tr>
                     <tr>
                         <td>Time Spent in the Bank:</td>
-                        <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, similique.</td>
+                        <td>It represents the period from the first year you entered the bank to this day.</td>
                     </tr>
                     <tr>
                         <td>Number of Products:</td>
-                        <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, similique.</td>
+                        <td>It represents the number of products you have in the bank, for example, it could be a credit card, debit card or other type of product..</td>
                     </tr>
                     <tr>
                         <td>Credit Car:</td>
-                        <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, similique.</td>
+                        <td>Represents whether you have a credit card.</td>
                     </tr>
                     <tr>
                         <td>Active:</td>
-                        <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, similique.</td>
+                        <td>It represents your activity according to whether you have made any transactions in the bank in the last 1 year.</td>
                     </tr>
                     <tr>
                         <td>Estimated Salary:</td>
-                        <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, similique.</td>
+                        <td>Represents your estimated annual income in dollars.</td>
                     </tr>
                 </table>
             </div>
         </div>
     </div>
+    <appFooter />
 </template>
 
 <script>
+import appFooter from "@/components/appFooter.vue"
 export default {
+    components : {
+        appFooter : appFooter,
+    },
     methods: {
         doActiveModel(modelId) {
 
@@ -124,6 +129,10 @@ export default {
 
 .example-model-1-image {
     margin-top: 300px;
+}
+.example-model-1-image img {
+    width: 700px;
+    height: 500px;
 }
 
 .example-model-1-body {
