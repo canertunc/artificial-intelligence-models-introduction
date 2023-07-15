@@ -3,7 +3,7 @@
   
       <div class="head">
         <div>
-        <img src="@/assets/personal-logo.jpg" alt="logo">
+        <img src="../../public/new2.jpg" alt="logo">
         </div>
         <div>
           <h2>DopingAI</h2>

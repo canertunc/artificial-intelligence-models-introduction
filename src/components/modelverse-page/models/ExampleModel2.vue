@@ -3,102 +3,24 @@
         <div class="flex-row">
             <div class="credit-score flex-inf">
                 <div class="label-inf">
-                    <label for="">Credit Score</label>
+                    <label for="">Face Image</label>
                 </div>
                 <div class="input-inf">
-                    <input type="number" min="0" max="1000">
-                </div>
-            </div>
-
-            <div class="geography flex-inf">
-                <div class="label-inf">
-                    <label for="">Geography</label>
-                </div>
-                <div class="input-inf">
-                    <select name="" id="">
-                        <option value="">France</option>
-                        <option value="">Germany</option>
-                        <option value="">Spain</option>
-                    </select>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="flex-row">
-
-            <div class="gender flex-inf">
-                <div class="label-inf">
-                    <label for="">Gender</label>
-                </div>
-                <div class="input-inf">
-                    <select name="" id="">
-                        <option value="">Female</option>
-                        <option value="">Male</option>
-                    </select>
-                </div>
-            </div>
-            <div class="credit-score flex-inf">
-                <div class="label-inf">
-                    <label for="">Age</label>
-                </div>
-                <div class="input-inf">
-                    <input type="number" min="18" max="125">
+                    <input type="file" @change="uploadImage">
                 </div>
             </div>
         </div>
 
-        <div class="credit-score flex-inf">
-            <div class="label-inf">
-                <label for="">Time Spent in the Bank</label>
-            </div>
-            <div class="input-inf">
-                <input type="number" min="0" max="12">
-            </div>
+        <div v-if="processedImageUrl">
+            <img :src="processedImageUrl"  class="added-image">
         </div>
 
-        <div class="credit-score flex-inf">
-            <div class="label-inf">
-                <label for="">Number of Products</label>
-            </div>
-            <div class="input-inf">
-                <input type="number" min="1" max="4">
-            </div>
-        </div>
-        <div class="flex-row">
-            <div class="credit-score flex-inf">
-                <div class="label-inf">
-                    <label for="">Credit Car</label>
-                </div>
-                <div class="input-inf">
-                    <select name="" id="">
-                        <option value="">Yes</option>
-                        <option value="">No</option>
-                    </select>
-                </div>
-            </div>
 
-            <div class="credit-score flex-inf">
-                <div class="label-inf">
-                    <label for="">Active</label>
-                </div>
-                <div class="input-inf">
-                    <select name="" id="">
-                        <option value="">Yes</option>
-                        <option value="">No</option>
-                    </select>
-                </div>
-            </div>
-        </div>
 
-        <div class="credit-score flex-inf">
-            <div class="label-inf">
-                <label for="">Estimated Salary(Yearly)</label>
-            </div>
-            <div class="input-inf">
-                <input type="number" min="0" max="200000">
-            </div>
-        </div>
+
+
+
+
 
         <div class="estimate-button-div flex-inf">
             <button class="estimate-button">Estimate</button>
@@ -107,6 +29,33 @@
 </template>
 
 <script>
+
+    export default {
+        data() {
+            return {
+                processedImageUrl: '',
+            }
+        },
+        methods: {
+    uploadImage(event) {
+      const file = event.target.files[0];
+      const reader = new FileReader();
+
+      reader.onload = (e) => {
+        const image = new Image();
+        image.src = e.target.result;
+
+        // Resim işleme işlemlerini burada gerçekleştirin
+        // Örneğin, resmin boyutunu değiştirme, filtreleme vb.
+
+        // İşlenmiş resim URL'sini ayarla
+        this.processedImageUrl = image.src;
+      };
+
+      reader.readAsDataURL(file);
+    }
+  }
+    }
 
 </script>
 
@@ -120,6 +69,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
     gap: 30px;
     padding-top: 20px;
     box-shadow: rgba(28, 23, 135, 0.24) 10px 3px 18px;
@@ -154,6 +104,7 @@
     cursor: pointer;
     transition:0.5s;
     opacity: 0.5;
+    margin-bottom: 20px;
 }
 .estimate-button:hover {
     border: 1px aliceblue solid;
@@ -176,6 +127,11 @@
 }
 .model-body label {
     font-size: 13px;
+}
+
+.added-image {
+    width: 150px;
+    height: 150px;
 }
 
 
