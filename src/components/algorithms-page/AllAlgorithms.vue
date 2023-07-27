@@ -6,16 +6,13 @@
             <router-link class="guide-link" to="/algorithmspage/suportvectormachines"><h5>Support Vector Machines Algorithm</h5></router-link>
           </div>
           <div class="model-1">
-            <h5>Machine Learning Algorithm</h5>
+            <router-link class="guide-link" to="/algorithmspage/randomforests"><h5>Random Forest Algorithm</h5></router-link>
           </div>
           <div class="model-1">
-            <h5>Machine Learning Algorithm</h5>
+            <router-link class="guide-link" to="/algorithmspage/artificialneuralnetworks"><h5>Artificial Neural Networks</h5></router-link>
           </div>
           <div class="model-1">
-            <h5>Machine Learning Algorithm</h5>
-          </div>
-          <div class="model-1">
-            <h5>Machine Learning Algorithm</h5>
+            <router-link class="guide-link" to="/algorithmspage/convolutionalneuralnetworks"><h5>Convolutional Neural Networks</h5></router-link>
           </div>
           <div class="model-1">
             <h5>Machine Learning Algorithm</h5>

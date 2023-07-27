@@ -5,23 +5,20 @@
         <div class="flex-row">
             <div class="credit-score flex-inf">
                 <div class="label-inf">
-                    <label for="">Credit Score</label>
+                    <label for="">Year</label>
                 </div>
                 <div class="input-inf">
-                    <input type="number" min="0" max="1000">
+                    <input type="number" min="1950" max="2023">
                 </div>
             </div>
 
             <div class="geography flex-inf">
                 <div class="label-inf">
-                    <label for="">Geography</label>
+                    <label for="">Kms Driven</label>
                 </div>
                 <div class="input-inf">
-                    <select name="" id="">
-                        <option value="">France</option>
-                        <option value="">Germany</option>
-                        <option value="">Spain</option>
-                    </select>
+                    <input type="number" min="0" max="1000000">
+
                 </div>
             </div>
 
@@ -31,76 +28,37 @@
 
             <div class="gender flex-inf">
                 <div class="label-inf">
-                    <label for="">Gender</label>
+                    <label for="">Suspension Type</label>
                 </div>
                 <div class="input-inf">
                     <select name="" id="">
-                        <option value="">Female</option>
-                        <option value="">Male</option>
+                        <option value="">Manuel</option>
+                        <option value="">Automatic</option>
                     </select>
                 </div>
             </div>
             <div class="credit-score flex-inf">
                 <div class="label-inf">
-                    <label for="">Age</label>
-                </div>
-                <div class="input-inf">
-                    <input type="number" min="18" max="125">
-                </div>
-            </div>
-        </div>
-
-        <div class="credit-score flex-inf">
-            <div class="label-inf">
-                <label for="">Time Spent in the Bank</label>
-            </div>
-            <div class="input-inf">
-                <input type="number" min="0" max="12">
-            </div>
-        </div>
-
-        <div class="credit-score flex-inf">
-            <div class="label-inf">
-                <label for="">Number of Products</label>
-            </div>
-            <div class="input-inf">
-                <input type="number" min="1" max="4">
-            </div>
-        </div>
-        <div class="flex-row">
-            <div class="credit-score flex-inf">
-                <div class="label-inf">
-                    <label for="">Credit Car</label>
+                    <label for="">Car Name Model</label>
                 </div>
                 <div class="input-inf">
                     <select name="" id="">
-                        <option value="">Yes</option>
-                        <option value="">No</option>
-                    </select>
-                </div>
-            </div>
-
-            <div class="credit-score flex-inf">
-                <div class="label-inf">
-                    <label for="">Active</label>
-                </div>
-                <div class="input-inf">
-                    <select name="" id="">
-                        <option value="">Yes</option>
-                        <option value="">No</option>
+                    <option value="">Accord</option>
+                    <option value="">Amaze</option>
+                    <option value="">BR-V</option>
+                    <option value="">Brio</option>
+                    <option value="">CR-V</option>
+                    <option value="">City</option>
+                    <option value="">Civic</option>
+                    <option value="">Jazz</option>
+                    <option value="">Mobilio</option>
+                    <option value="">WR-V</option>
                     </select>
                 </div>
             </div>
         </div>
 
-        <div class="credit-score flex-inf">
-            <div class="label-inf">
-                <label for="">Estimated Salary(Yearly)</label>
-            </div>
-            <div class="input-inf">
-                <input type="number" min="0" max="200000">
-            </div>
-        </div>
+        
 
         <div class="estimate-button-div flex-inf">
             <button class="estimate-button" @click="hideDiv"> Estimate</button>
@@ -146,6 +104,10 @@
     background-color: black;
     margin-right: 300px;
     opacity: 0.9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     padding-top: 20px;
     box-shadow: rgba(28, 23, 135, 0.24) 10px 3px 18px;
     border-radius: 4px;
@@ -167,6 +129,9 @@
     flex-direction: column;
     align-items: center;
     gap: 10px;
+}
+.flex-honda {
+    margin-top: 200px
 }
 
 .flex-row {

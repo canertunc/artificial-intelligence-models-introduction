@@ -1,5 +1,5 @@
 <template>
-    <div class="nav-bar" :class="{ scrolled: isScrolled }">
+    <div class="nav-bar" :class="{ scrolled: isScrolled  }">
   
       <div class="head">
         <div>
@@ -29,7 +29,8 @@
   export default {
     data(){
       return {
-        isScrolled : false
+        isScrolled : false,
+
       }
     },
     mounted() {
@@ -41,7 +42,9 @@
   methods: {
     handleScroll() {
       this.isScrolled = window.scrollY > 0;
-    }
+    },
+
+   
   }
   }
 
@@ -63,6 +66,9 @@
   }
   .scrolled {
     background-color: black;
+  }
+  .white {
+    background-color: white;
   }
   
   </style>

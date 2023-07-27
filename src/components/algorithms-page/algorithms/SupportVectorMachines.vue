@@ -225,12 +225,15 @@
 }
 
 .svm-second {
-    margin-top: 200px;
+    margin-top: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: row;
     gap: 100px;
+}
+.svm-second-image {
+    margin-top: 100px;
 }
 
 .svm-second-body {
@@ -238,7 +241,7 @@
 }
 
 .svm-thridly {
-    margin-top: 200px;
+    margin-top: 100px;
 }
 
 .svm-thridly-body {
@@ -251,7 +254,7 @@
 }
 
 .svm-fourthly {
-    margin-top: 200px;
+    margin-top: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -273,7 +276,6 @@
     flex-direction: row;
     gap: 50px;
     margin-top: 100px;
-    margin-bottom: 100px;
 }
 
 .svm-fourthly-section-2 {
@@ -281,7 +283,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    margin-top: 200px;
+    margin-top: 100px;
     gap: 100px;
 }
 

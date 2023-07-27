@@ -16,19 +16,25 @@
         <div class="bar-header">
             <h3>Machine Learning</h3>
         </div>
-        <div class="choices-bar">
+        <div class="choices-bar choices-models">
             <div class="model-button">
                 <button @click="doActiveModel(1)" class="model-name-button"
-                    :class="{ focusButton: $store.state.models.isActiveMlExample.isActive }">Bank Fraud Detecting</button>
+                    :class="{ focusButton: $store.state.models.bankFraudDetecting.isActive }">Bank Fraud Detecting</button>
             </div>
             <div class="model-button">
                 <button @click="doActiveModel(2)" class="model-name-button"
-                    :class="{ focusButton: $store.state.models.isActiveMlExample2.isActive }">Machine Learning</button>
+                    :class="{ focusButton: $store.state.models.druggerDetecting.isActive }">Drugger Detecting</button>
             </div>
             <div class="model-button">
-                <button class="model-name-button">Machine Learning</button>
+                <button @click="doActiveModel(3)" class="model-name-button"
+                :class="{ focusButton: $store.state.models.spaceshipPassenger.isActive }">Spaceship Passenger</button>
+            </div>
+            <div class="model-button">
+                <button @click="doActiveModel(4)" class="model-name-button"
+                :class="{ focusButton: $store.state.models.hondaCarValidation.isActive }">Honda Car Validation</button>
             </div>
         </div>
+
         <div class="back">
             <button @click="doActiveMain">back</button>
         </div>
@@ -53,13 +59,18 @@
         </div>
 
     </div>
-    <ExampleModel v-if="$store.state.models.isActiveMlExample.isActive" />
-    <ExampleModel2 v-else-if="$store.state.models.isActiveMlExample2.isActive" />
+    <bankFraudDetecting v-if="$store.state.models.bankFraudDetecting.isActive" />
+    <druggerDetecting v-else-if="$store.state.models.druggerDetecting.isActive" />
+    <spaceshipPassenger v-else-if="$store.state.models.spaceshipPassenger.isActive" />
+    <hondaCarValidationModel v-else-if="$store.state.models.hondaCarValidation.isActive" />
+
 </template>
 
 <script>
-import ExampleModel from "@/components/modelverse-page/models/ExampleModel.vue"
-import ExampleModel2 from "@/components/modelverse-page/models/ExampleModel2.vue"
+import bankFraudDetecting from "@/components/modelverse-page/models/ExampleModel.vue"
+import druggerDetecting from "@/components/modelverse-page/models/ExampleModel2.vue"
+import spaceshipPassenger from "@/components/modelverse-page/models/ExampleModel3.vue"
+import hondaCarValidationModel from "@/components/modelverse-page/models/HondaCarValidationModel.vue"
 
 export default {
     beforeUnmount(){
@@ -67,8 +78,10 @@ export default {
         this.$store.state.mainButton = true
     },
     components: {
-        ExampleModel: ExampleModel,
-        ExampleModel2: ExampleModel2,
+        bankFraudDetecting: bankFraudDetecting,
+        druggerDetecting: druggerDetecting,
+        spaceshipPassenger : spaceshipPassenger,
+        hondaCarValidationModel : hondaCarValidationModel,
     },
     methods: {
         doActiveMl() {
@@ -184,4 +197,53 @@ export default {
     border: 1px aliceblue solid;
     opacity: 1;
 }
+
+
+.choices-models {
+    overflow: auto;
+    height: 200px;
+    margin-left: 20px
+  }
+   .model-1 {
+    margin-right: 20px;
+   }
+
+.choices-models::-webkit-scrollbar {
+  width: 5px; 
+}
+
+.choices-models::-webkit-scrollbar-thumb {
+  background-color: #ffff; 
+  border-radius: 5px;
+}
+
+.choices-models::-webkit-scrollbar-thumb:hover {
+  background-color: #555; 
+}
+
+
+.choices-models::-webkit-scrollbar-track {
+  background-color: black; 
+}
+
+.choices-models::-webkit-scrollbar-track-piece {
+  background-color: black; 
+}
+
+.choices-models::-webkit-scrollbar-button {
+  background-color: black; 
+}
+  
+  
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0; 
+      transform: translateY(20px); 
+    }
+    100% {
+      opacity: 1; 
+      transform: translateY(0); 
+    }
+  }
 </style>

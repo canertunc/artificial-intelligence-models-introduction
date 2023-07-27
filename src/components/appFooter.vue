@@ -22,7 +22,7 @@
             linkedlnURL : "https://www.linkedin.com/in/caner-tun%C3%A7-7592291b8/",
             twitterURL : "https://twitter.com/"
         }
-    },
+    }
     }
 
 </script>
@@ -38,7 +38,8 @@
 footer {
     text-align: center;
     margin-top: 50px;
-
 }
+
+
 
 </style>

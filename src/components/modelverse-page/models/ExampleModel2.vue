@@ -14,14 +14,6 @@
         <div v-if="processedImageUrl">
             <img :src="processedImageUrl"  class="added-image">
         </div>
-
-
-
-
-
-
-
-
         <div class="estimate-button-div flex-inf">
             <button class="estimate-button">Estimate</button>
         </div>

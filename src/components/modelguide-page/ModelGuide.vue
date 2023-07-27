@@ -3,22 +3,16 @@
       <div class="model-guide-choices">
         <div class="s2">
           <div class="model-1">
-            <router-link class="guide-link" to="/modelguide/examplemodel1guide"><h5>Machine Learning Guide</h5></router-link>
+            <router-link class="guide-link" to="/modelguide/bankfrauddetectingguide"><h5>Bank Fraud Detecting Guide</h5></router-link>
           </div>
           <div class="model-1">
-            <h5>Machine Learning Guide</h5>
+            <router-link class="guide-link" to="/modelguide/druggerdetectingguide"><h5>Drugger Detecting Guide</h5></router-link>
           </div>
           <div class="model-1">
-            <h5>Machine Learning Guide</h5>
+            <router-link class="guide-link" to="/modelguide/spaceshippassengerguide"><h5>Spaceship Passenger Guide</h5></router-link>
           </div>
           <div class="model-1">
-            <h5>Machine Learning Guide</h5>
-          </div>
-          <div class="model-1">
-            <h5>Machine Learning Guide</h5>
-          </div>
-          <div class="model-1">
-            <h5>Machine Learning Guide</h5>
+            <router-link class="guide-link" to="/modelguide/hondacarvalidationguide"><h5>Honda Car Validation Guide</h5></router-link>
           </div>
           <div class="model-1">
             <h5>Machine Learning Guide</h5>

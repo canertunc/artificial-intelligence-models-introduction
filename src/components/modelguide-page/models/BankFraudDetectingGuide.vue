@@ -3,7 +3,7 @@
 
         <div class="example-model-1-head">
             <h2>BANK FRAUD DETECTING</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, quibusdam.</p>
+            <p>If you want to find that bank fraud</p>
             <router-link to="/modelverse"><button class="try-button" @click="doActiveModel(1)">Try</button></router-link>
         </div>
 
